@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <link rel="stylesheet" type="text/css" href="./styles/style.css"/>
+  <title>Sobre</title>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="py-4 shadow-sm bg-white">
+    <div class="container flex flex-wrap items-center justify-between">
+      <!-- Logo -->
+      <a href="index2.html" class="w-32">
+        <img src="./assets/Mel apiario.png" alt="Logo">
+      </a>
+      <!-- Barra de Pesquisa -->
+      <div class="w-full lg:w-auto mt-4 lg:mt-0 flex relative">
+        <span class="absolute left-4 top-2 text-lg text-gray-400">
+          <i class="fas fa-search"></i>
+        </span>
+        <input type="text" class="w-full border border-primary border-r-0 pl-12 pr-3 rounded-l-md focus:outline-none"
+          placeholder="Pesquisar">
+        <button
+          class="bg-yellow-400 border border-primary text-black px-6 lg:px-8 rounded-r-md hover:bg-transparent hover:text-secundary transition">
+          Pesquisar
+        </button>
+      </div>
+      <!-- Ícones -->
+      <div class="flex items-center space-x-4 mt-4 lg:mt-0">
+        <a href="#" class="text-center text-gray-700 hover:text-yellow-400 transition relative">
+          <div class="text-2x1"><i class="far fa-heart"></i></div>
+          <div class="text-xs leading-3">Lista de Desejo</div>
+          <span
+            class="absolute right-0 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-black text-xs">8</span>
+        </a>
+        <a href="#" class="text-center text-gray-700 hover:text-yellow-400 transition relative">
+          <div class="text-2x1"><i class="fas fa-shopping-bag"></i></div>
+          <div class="text-xs leading-3">Carrinho</div>
+          <span
+            class="absolute -right-3 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-black text-xs">8</span>
+        </a>
+        <a href="#" class="text-center text-gray-700 hover:text-yellow-200 transition">
+          <div class="text-2x1"><i class="far fa-user"></i></div>
+          <div class="text-xs leading-3">Conta</div>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- fim header-->
+
+  <!-- NAVBAR -->
+  <nav class="bg-gray-800">
+    <div class="container flex flex-wrap items-center justify-between">
+      <!-- Botão Todas Categorias -->
+      <div class="relative group">
+        <button class="px-8 py-4 bg-yellow-400 flex items-center cursor-pointer">
+          <span class="text-white">
+            <i class="fas fa-bars"></i>
+          </span>
+          <span class="capitalize ml-2 text-white">Todas Categorias</span>
+        </button>
+
+        <!-- Dropdown -->
+        <div
+          class="absolute left-0 top-full w-64 bg-white shadow-md py-3 divide-y divide-gray-300 hidden group-hover:block z-50">
+          <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+            <img src="./assets/abelha1.svg" class="w-5 h-5 object-contain">
+            <span class="ml-4 text-gray-600 text-sm">Categoria 1</span>
+          </a>
+          <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+            <img src="./assets/abelha1.svg" class="w-5 h-5 object-contain">
+            <span class="ml-4 text-gray-600 text-sm">Categoria 2</span>
+          </a>
+          <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+            <img src="./assets/abelha1.svg" class="w-5 h-5 object-contain">
+            <span class="ml-4 text-gray-600 text-sm">Categoria 3</span>
+          </a>
+          <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+            <img src="./assets/abelha1.svg" class="w-5 h-5 object-contain">
+            <span class="ml-4 text-gray-600 text-sm">Categoria 4</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Links do Navbar -->
+      <div class="flex items-center justify-between flex-grow pl-12">
+        <div class="flex items-center space-x-6 capitalize">
+          <a href="index2.html" class="text-gray-200 hover:text-white transition">Início</a>
+          <a href="./produto.html" class="text-gray-200 hover:text-white transition">Produtos</a>
+          <a href="sobre.html" class="text-gray-200 hover:text-white transition">Sobre</a>
+          <a href="./contato.html" class="text-gray-200 hover:text-white transition">Contate-nos</a>
+        </div>
+        <a href="#" class="text-gray-200 hover:text-white transition">Login/Registrar-se</a>
+      </div>
+    </div>
+  </nav>
+  <!-- fim navbar -->
+
+  <!--Inicio-->
+  <div class="container mx-4 h-auto">
+    <h1 class="font-bold p-4">A HISTÓRIA DO APIÁRIO</h1>
+    <p class="text-gray-500 justify-between">
+      O Apiário do Reino<br>
+
+      O <strong>Ápiario do Reino </strong>surgiu a partir de uma paixão que começou na infância. Quando eu tinha apenas
+      12 anos, tive a oportunidade de ajudar meu tio em seu apiário. Essa experiência despertou em mim uma fascinação
+      pelo mundo das abelhas, que acompanhou meu crescimento ao longo dos anos. Gradualmente, continuei a auxiliá-lo nas
+      diversas atividades relacionadas à apicultura, desenvolvendo um profundo interesse por esses insetos
+      extraordinários.
+
+      A virada decisiva para a formação da nossa empresa ocorreu quando assisti a um vídeo do TNA Nunes no YouTube.
+      Nele, o especialista compartilhava seu extenso conhecimento sobre abelhas de maneira acessível e inspiradora. Foi
+      nesse momento que percebi que este era o caminho que eu queria seguir. Motivado por sua abordagem e pela paixão
+      que ele transmitia, comecei a explorar mais sobre o tema, assistindo a vídeos e buscando cursos na área.
+
+      À medida que me aprofundava no universo das abelhas, fui me encantando com sua importância vital para a humanidade
+      e o planeta. Hoje, compreendo que esses polinizadores desempenham um papel essencial em nosso ecossistema,
+      contribuindo não apenas para a produção de alimentos, mas também para a saúde e o bem-estar de todos nós.
+
+      Com essa compreensão, fundei o Apiário do Reino com o compromisso de preservar, cuidar e valorizar as abelhas. O
+      nome da empresa reflete nossa crença de que Deus criou esses seres para nosso benefício, atribuindo-lhes a
+      responsabilidade de polinizar nosso planeta, uma função crucial para a sobrevivência da vida como a conhecemos.
+      Agradecemos a elas e reconhecemos os benefícios que oferecem, como o mel — um produto com propriedades medicinais
+      — além do pólen, própolis e geleia real. A cera das abelhas, por sua vez, tornou-se um recurso valioso e procurado
+      no mercado.
+
+      Além de seus produtos, as abelhas possuem aplicações na medicina, demonstrando seu valor inestimável. Nossa missão
+      no Apiário do Reino é compartilhar esse conhecimento com o mundo, educando as pessoas sobre a importância das
+      abelhas e promovendo práticas que garantam sua preservação.
+
+      Hoje, continuamos a trabalhar com essas criaturas incríveis, dedicando-nos a viver da apicultura e a valorizar
+      sempre seu papel essencial no equilíbrio da natureza e na vida humana. Acreditamos que, ao cuidar das abelhas,
+      estamos cuidando do futuro do nosso planeta.
+    </p>
+    <h1 class="font-bold p-4">MISSÃO</h1>
+    <p class="text-gray-500 justify-between ">
+      A missão do <strong>Ápiario do Reino</strong> é preservar e valorizar as abelhas, promovendo a educação da
+      comunidade sobre sua importância vital para o ecossistema. Comprometemo-nos a implementar práticas sustentáveis
+      que assegurem a proteção dessas espécies, ao mesmo tempo em que compartilhamos conhecimento sobre os produtos
+      apícolas, como mel, pólen, própolis e geleia real, destacando seus benefícios para a saúde e o bem-estar da
+      população.
+    </p>
+    <h1 class="font-bold p-4">VISÃO</h1>
+    <p class="text-gray-500 justify-between ">
+      Aspiramos ser reconhecidos como líderes em apicultura sustentável, inspirando indivíduos e comunidades a valorizar
+      e proteger as abelhas, considerados elementos essenciais para a vida no planeta. Buscamos expandir nosso alcance
+      educacional e promover a conscientização acerca da importância da polinização e do equilíbrio ecológico,
+      contribuindo para um futuro mais saudável e sustentável.
+    </p>
+    <h1 class="font-bold p-4">VALORES</h1>
+    <h2 class="font-bold p-4">1° Sustentabilidade</h2>
+    <p class="text-gray-500 justify-between ">
+      Compromisso inabalável com práticas que respeitam e preservam tanto o meio ambiente quanto as abelhas.
+    </p>
+    <h2 class="font-bold p-4">2° Educação</h2>
+    <p class="text-gray-500 justify-between">
+      Promoção do conhecimento e conscientização sobre a importância das abelhas para a biodiversidade e a saúde humana.
+    </p>
+    <h2 class="font-bold p-4">3° Responsabilidade</h2>
+    <p class="text-gray-500 justify-between">
+      Reconhecimento da nossa responsabilidade em proteger e cuidar das abelhas, que desempenham um papel crucial no
+      equilíbrio da natureza.
+    </p>
+    <h2 class="font-bold p-4">4° Qualidade</h2>
+    <p class="text-gray-500 justify-between">
+      Dedicação à excelência na produção de produtos apícolas, assegurando que nossos consumidores desfrutem de produtos
+      saudáveis e de alta qualidade.
+    </p>
+    <h2 class="font-bold p-4">5° Comunidade</h2>
+    <p class="text-gray-500 justify-between">
+      Estímulo à interação e ao envolvimento da comunidade em iniciativas que promovam a preservação das abelhas e do
+      ecossistema, fortalecendo laços sociais e ambientais.
+    </p>
+  </div>
+
+  <!--Fim-->
+
+  <div class="cart">
+    <a target="_blank">
+      <!---<img src="./assets/cart buy.png" width="75" alt="Compre por aqui" title="Compre por aqui">--->
+    </a>
+  </div>
+</body>
+
+</html>

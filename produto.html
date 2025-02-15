@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="./styles/style.css"/>
+    <title>Produtos</title>
+
+
+</head>
+    <body>
+    <!-- header -->
+    <header class="py-4 shadow-sm bg-white">
+        <div class="container flex items-center justify-between">
+            <!-- Logo -->
+            <a class="w-32" src="./assets/Mel apiario.png" href="./index2.html"><h1 class="text-3xl font-bold text-white"></h1><img src="./assets/Mel apiario.png"></a>
+            <!-- Barra de Pesquisa -->
+            <div class="w-full max-w-xl relative flex">
+                <span class="absolute left-4 top-2 text-lg text-gray-400">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text" class="w-full border border-primary border-r-0 pl-12 pr-3 rounded-l-md focus:outline-none" placeholder="Pesquisar">
+                <button class="bg-yellow-400 border border-primary text-black px-8 rounded-r-md hover:bg-transparent hover:text-secundary transition">Pesquisar</button>
+            </div>
+            <!-- Icones -->
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-center text-gray-700 hover:text-yellow-400 transition relative">
+                    <div class="text-2x1">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="text-xs leading-3">Lista de Desejo</div>
+                    <span class="absolute right-0 -top-1 w-12 h-5 rounded-full flex items-center justify-center bg-primary text-black text-xs">8</span>
+                </a>
+
+                <a href="*" class="text-center text-gray-700 hover:text-yellow-400 transition relative">
+                        <div class="text-2x1">
+                            <i class="fas fa-shopping-bag"></i>
+                        </div>
+                        <div class="text-xs leading-3">Carrinho</div>
+                        <span class="absolute -right-3 -top-1 w-10 h-5 rounded-full flex items-center justify-center bg-primary text-black text-xs">8</span>
+                </a>
+
+                <a href="#" class="text-center text-gray-700 hover:text-yellow-200 transition relative">
+                    <div class="text-2x1">
+                        <i class="far fa-user"></i>
+                    </div>
+                    <div class="text-xs leading-3">Conta</div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- fim header-->
+    
+    <!-- navbar -->
+    <nav class="bg-gray-800">
+            <div class="container flex">
+                <!-- todas categorias -->
+                 <div class="px-8 py-4 bg-yellow-400 flex items-center cursor-pointer relative group">
+                    <span class="text-white">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                    <span class="capitalize ml-2 text-white">Todas categorias</span>
+    
+                    <div class="absolute w-full left-0 top-full bg-white shadow-md py-3 divide-y divide-gray-300 divide-solid hidden group-hover:block">
+                        <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                            <img src="./assets/abelha 1.png" class="w-5 h-5 object-contain">
+                            <span class="ml-6 text-gray-600 text-sm">ABELHA</span>
+                        </a>
+    
+                        <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                            <img src="./assets/abelha1.svg" class="w-5 h-5 object-contain">
+                            <span class="ml-6 text-gray-600 text-sm">ABELHA</span>
+                        </a>
+    
+                        <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                            <img src="./assets/abelha1.svg" class="w-5 h-5 object-contain">
+                            <span class="ml-6 text-gray-600 text-sm">ABELHA</span>
+                        </a>
+    
+                        <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                            <img src="./assets/abelha1.svg" class="w-5 h-5 object-contain">
+                            <span class="ml-6 text-gray-600 text-sm">ABELHA</span>
+                        </a>
+                    </div>
+                 </div>
+                
+                <!-- Fim todas categorias -->
+    
+                <!-- navbar links -->
+                 <div class="flex items-center justify-between flex-grow pl-12">
+                    <div class="flex items-center space-x-6 capitalize">
+                        <a href="./index2.html" class="text-gray-200 hover:text-white transition">Ínicio</a>
+                        <a href="./produto.html" class="text-gray-200 hover:text-white transition">Produtos</a>
+                        <a href="./sobre.html" class="text-gray-200 hover:text-white transition">Sobre</a>
+                        <a href="./contato.html" class="text-gray-200 hover:text-white transition">Contate-nos</a>
+                    </div>
+                    <a href="#" class="text-gray-200 hover:text-white transition">Login/Registrar-se</a>
+                 </div>
+    
+            </div>
+        </nav>
+        <!-- fim navbar -->
+    
+    <!---Inicio do menu-->
+    <div id="menu">
+         <main class="m-10 grid grid-cols-1 md:grid-cols-1 gap-7 md:gap-20 mx-auto max-w-7xl px-2 mb-20">
+            <!--Produtos item-->
+            <div class="flex gap-2">
+            <img src="./assets/Mel apiario.png" alt="mel silvestre" class="w-28 h-28 rounded-md  hover:scale-110 hover:-rotate-2 duration-300"/>
+            <div>
+            <p class="font-bold">Mel silvestre</p> 
+            <p class="text-sm">O mel silvestre é um tipo de mel multifloral, produzido a partir do néctar de varias flores.</p>
+                <div class="flex items-center gap-2 justify-between mt-3">
+                    <p class="font-bold text-lg">R$ 35,00</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                          data-name="Mel silvestre"
+                          data-price="35,00">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+            </div>
+            <div class="flex gap-2">
+                <img src="./assets/Mel apiario.png" alt="mel silvestre" class="w-28 h-28 rounded-md  hover:scale-110 hover:-rotate-2 duration-300"/>
+                <div>
+                <p class="font-bold">Propolis</p> 
+                <p class="text-sm">é um produto da colméia, elaborado a partir de exsudatos de resinas que as abelhas recolhem de determinadas plantas.</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 40,00</p>
+                            <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                              data-name="Propolis"
+                              data-price="40,00"
+                            >
+                                <i class="fa fa-cart-plus text-lg text-white"></i>
+                            </button>
+                        </div>
+                </div>
+                <div class="flex gap-2">
+                    <img src="./assets/barril.png" alt="barril" class="w-28 h-28 rounded-md  hover:scale-110 hover:-rotate-2 duration-300"/>
+                    <div>
+                    <p class="font-bold">Barril</p> 
+                    <p class="text-sm">Barril para uso</p>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$ 60,00</p>
+                                <button class="bg-gray-900 px-5 rounded add-to-cart-btn"
+                                  data-name="Barril"
+                                  data-price="60,00"
+                                >
+                                    <i class="fa fa-cart-plus text-lg text-white"></i>
+                                </button>
+                            </div>
+                    </div>
+        <!--Fim dos produtos-->
+
+    </main>
+
+        </div>
+        <!--Fim do menu-->
+        <!--Modal cart-->
+        <div class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden"
+            id="cart-modal"
+        >
+        
+            <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+         
+         
+            <h2 class="text-center font-bold text-2xl">Meu carrinho</h2>
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+            
+            <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+            <p class="font-bold mt-4">Endereço de entrega:</p>
+            <input
+                type="text"
+                placeholder="Digite seu endereço completo ..."
+                id="address"
+                class="w-full border-2 p-1 rounded my-1"
+                />
+            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+            <div class="flex items-center justify-between mt-5 w-full">
+                <button id="close-modal-btn">Fechar</button>
+                <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar</button>
+            </div>
+        
+        </div>
+        </div>
+        <!--Fim Modal cart-->
+
+
+
+        <!--Button cart footer-->
+        <footer class="w-full bg-yellow-500 py-2 fixed bottom-0 z-40 flex items-center justify-center">
+        <button class="flex items-center gap-2 text-white font-bold"
+         id="cart-btn"
+        >
+            (<span id="cart-count">0</span>)
+            Ver meu carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+        </footer>  
+        <!---Fim Button cart footer-->
+    </body>
+
+        <div class="whats"><!---botão do whatsapp-->
+            <a href="//wa.me/5524998776369?text=Estou interessado em algum(s) produtos" target="_blank"> 
+             <img src="./assets/whatsapp1.png" width="75" alt="Fale conosco através do whatsapp" title="Fale conosco através do whatsapp" >     
+            </a>        
+         </div>
+        <div class="cart">
+            <a target="_blank">
+             <!---<img src="./assets/cart buy.png" width="75" alt="Compre por aqui" title="Compre por aqui">--->
+            </a>
+        </div>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+        <script src="script.js"></script> 
+    </body>
+</html>

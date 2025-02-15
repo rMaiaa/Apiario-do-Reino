@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-sans;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-roboto;
+    }
+    .whats {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 9999;
+    }
+    .cart {
+        position: fixed;
+        bottom: 30px;
+        left: 30px ;
+        z-index: 9999;
+    }
+}

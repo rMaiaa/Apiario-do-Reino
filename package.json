@@ -1,0 +1,16 @@
+{
+  "name": "apiario-do-reino",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "tailwindcss build ./styles/style.css dist/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "autoprefixer": "^10.4.20",
+    "tailwindcss": "^3.4.15"
+  }
+}
