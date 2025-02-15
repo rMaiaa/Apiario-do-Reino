@@ -1,127 +1,384 @@
 <!DOCTYPE html>
-<!---<html lang="pt-br">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="./styles/output.css"/>
-    
-    <title>Ápiario do Reino</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+    <title>Apíario</title>
 </head>
-<body>
-<header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
-    <div class="w-full h-full flex flex-col justify-center items-center">
-        <img src="./assets/Mel apiario.png" 
-             alt="Logo fundo 2"
-             class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200"/>
 
-            <h1 class="text-4xl mt-4 mb-2 font-bold text-white">Ápiario do Reino</h1>
-            <span class="text-white font-medium">Rua A número: *** Cotiara,Barra Mansa RJ</span>
-            <div class="bg-yellow-600 px-4 py-1 rounded-lg mt-5 "id="date.span">
-                <span class="text-white font-medium">Seg à Sex : 7:00 hrs ás 18:00 hrs</span>
+<body>
+    <!-- HEADER 
+    <header class="py-4 shadow-sm bg-white">
+        <div class="container flex flex-wrap items-center justify-between">
+            Logo 
+            <a href="./index2.html" class="w-32">
+                <img src="./assets/Mel apiario.png" alt="Logo">
+            </a>
+             Barra de Pesquisa 
+            <div class="w-full lg:w-auto mt-4 lg:mt-0 flex relative">
+                <span class="absolute left-4 top-2 text-lg text-gray-400">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text"
+                    class="w-full border border-primary border-r-0 pl-12 pr-3 rounded-l-md focus:outline-none"
+                    placeholder="Pesquisar">
+                <button
+                    class="bg-yellow-400 border border-primary text-black px-6 lg:px-8 rounded-r-md hover:bg-transparent hover:text-secundary transition">
+                    Pesquisar
+                </button>
+            </div>
+             Ícones 
+           <div class="flex items-center space-x-4 mt-4 lg:mt-0">
+                <a href="#" class="text-center text-gray-700 hover:text-yellow-400 transition relative">
+                    <div class="text-2x1"><i class="far fa-heart"></i></div>
+                    <div class="text-xs leading-3">Lista de Desejo</div>
+                    <span
+                        class="absolute right-0 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-black text-xs">8</span>
+                </a>
+                <a href="#" class="text-center text-gray-700 hover:text-yellow-400 transition relative">
+                    <div class="text-2x1"><i class="fas fa-shopping-bag"></i></div>
+                    <div class="text-xs leading-3">Carrinho</div>
+                    <span
+                        class="absolute -right-3 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-black text-xs">8</span>
+                </a>
+                <a href="#" class="text-center text-gray-700 hover:text-yellow-200 transition">
+                    <div class="text-2x1"><i class="far fa-user"></i></div>
+                    <div class="text-xs leading-3">Conta</div>
+                </a>
             </div>
         </div>
     </header>
-    <h2 class="text-2xl md:text-3xl font-black text-center mt-9 mb-6">
-        Conheça nossas opções: 
-    </h2>
+   fim header-->
 
-    <!--INICIO DO MENU-->
-    <!---<div class="bg-white justify-center">
-    
-        <main>
-        <!--PRODUTO ITEM-->
-
-       <!--- <div class="m-60 mr-10 grid grid-cols-2 gap-7 md:gap-10 mx-5 max-w-7xl px-2 mb-16">
-        <img src="./assets/Mel apiario.png" alt="Mel" class="w-28 h-28 rounded-full shadow-lg m-10 hover:scale-110 hover:-rotate-2 duration-300"/>
-
-            <div>
-                <p class="font-bold">Mel silvestre</p>
-                <p class="text-sm">O mel silvestre é um tipo de mel multifloral, <br>produzido a partir do néctar de varias flores.</p>
-
-                <div class="flex items-center gap-2 justify-between mt-3">
-                    <span class="price font-bold text-lg">R$ 35,00</span>
-                </div>
-            </div>
-            <div>
-                <button class="buy-button"
-                 data-name="Mel silvestre"
-                 data-price="R$ 35,00">
-                    <i class="bi bi-cart"></i>
+    <!-- NAVBAR -->
+    <nav class="bg-gray-800">
+        <div class="container flex flex-wrap items-center justify-between">
+            <!-- Botão Todas Categorias -->
+            <div class="relative group">
+                <button class="px-8 py-4 bg-yellow-400 flex items-center cursor-pointer">
+                    <span class="text-white">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                    <span class="capitalize ml-2 text-white">Todas Categorias</span>
                 </button>
+
+                <!-- Dropdown -->
+                <div
+                    class="absolute left-0 top-full w-64 bg-white shadow-md py-3 divide-y divide-gray-300 hidden group-hover:block z-50">
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./assets/abelha1.svg" class="w-5 h-5 object-contain">
+                        <span class="ml-4 text-gray-600 text-sm">Categoria 1</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./assets/abelha1.svg" class="w-5 h-5 object-contain">
+                        <span class="ml-4 text-gray-600 text-sm">Categoria 2</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./assets/abelha1.svg" class="w-5 h-5 object-contain">
+                        <span class="ml-4 text-gray-600 text-sm">Categoria 3</span>
+                    </a>
+                    <a href="#" class="flex items-center px-6 py-3 hover:bg-gray-100 transition">
+                        <img src="./assets/abelha1.svg" class="w-5 h-5 object-contain">
+                        <span class="ml-4 text-gray-600 text-sm">Categoria 4</span>
+                    </a>
+                </div>
             </div>
+
+            <!-- Links do Navbar -->
+            <div class="flex items-center justify-between flex-grow pl-12">
+                <div class="flex items-center space-x-6 capitalize">
+                    <a href="./index2.html" class="text-gray-200 hover:text-white transition">Início</a>
+                    <a href="./produto.html" class="text-gray-200 hover:text-white transition">Produtos</a>
+                    <a href="./sobre.html" class="text-gray-200 hover:text-white transition">Sobre</a>
+                    <a href="./contato.html" class="text-gray-200 hover:text-white transition">Contate-nos</a>
+                </div>
+                <a href="./Login.html" class="text-gray-200 hover:text-white transition">Login/Registrar-se</a>
             </div>
-        </main>
         </div>
+    </nav>
+    <!-- fim navbar -->
 
-        <!--Produto 2-->
-        
-        <!--<div class="bg-black justify-center">
-    
-            <main>
-            <!--PRODUTO ITEM-->
-    
-          <!---- <div class="m-60 mr-10 grid grid-cols-2 gap-7 md:gap-10 mx-5 max-w-7xl px-2 mb-16">
-            <img src="./assets/Mel apiario.png" alt="Mel" class="w-28 h-28 rounded-full shadow-lg m-10 hover:scale-110 hover:-rotate-2 duration-300"/>
-    
+    <!-- BANNER -->
+    <div class="bg-cover bg-no-repeat bg-center py-24" style="background-image: url('./assets/abelha 1.png');">
+        <div class="container text-left px-6 lg:px-24">
+            <h1 class="text-4xl lg:text-6xl text-white font-medium mb-4 capitalize">
+                Melhor mel para <br> adquirir na região!
+            </h1>
+            <p class="text-white text-sm lg:text-base">
+                Produtos de qualidade, o melhor mel da região, <br> você só encontra aqui no <strong>Ápiario do
+                    Reino</strong>.
+            </p>
+            <div class="mt-8">
+                <a href="#"
+                    class="bg-gray-500 border-green-300 text-white px-6 py-3 font-medium rounded-md hover:bg-transparent hover:text-primary transition">
+                    Compre agora
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- fim banner -->
+
+    <!-- figuras -->
+    <div class="container py-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mx-auto max-w-screen-lg">
+            <div class="border border-black rounded-sm px-3 py-6 flex justify-center items-center gap-5">
+                <img src="./assets/delivery.svg" alt="Frete grátis" class="w-12 h-12 object-contain">
                 <div>
-                    <p class="font-bold text-white">Própolis</p>
-                    <p class="text-sm text-white"> um produto da colméia, elaborado a partir de exsudatos de resinas ,<br>que as abelhas recolhem de determinadas plantas.</p> 
-    
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <span class="price font-bold text-lg text-white">R$ 35,00</span>
+                    <h4 class="font-medium capitalize text-lg">frete grátis</h4>
+                    <p class="text-gray-500 text-sm">acima de R$150,00</p>
+                </div>
+            </div>
+
+            <div class="border border-black rounded-sm px-3 py-6 flex justify-center items-center gap-5">
+                <img src="./assets/money_back.svg" alt="Reembolso" class="w-12 h-12 object-contain">
+                <div>
+                    <h4 class="font-medium capitalize text-lg">reembolso</h4>
+                    <p class="text-gray-500 text-sm">em até 30 dias</p>
+                </div>
+            </div>
+
+            <!-- Suporte 24h -->
+            <div class="border border-black rounded-sm px-3 py-6 flex justify-center items-center gap-5">
+                <img src="./assets/suporte_24h.svg" alt="Suporte 24h" class="w-12 h-12 object-contain">
+                <div>
+                    <h4 class="font-medium capitalize text-lg">suporte 24/7</h4>
+                    <p class="text-gray-500 text-sm">Assistência de suporte</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fim figuras -->
+
+    <!-- categorias 
+    <div class="container py-16 mx-auto">
+        <h2 class="text-3xl font-medium text-gray-800 uppercase mb-6 p-4"> categorias </h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="./assets/barril.png" class="w-full">
+                <a href="#"
+                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition">
+                    Mel 1</a>
+            </div>
+
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="./assets/barril.png" class="w-full">
+                <a href="#"
+                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition">
+                    Mel 1</a>
+            </div>
+
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="./assets/barril.png" class="w-full">
+                <a href="#"
+                    class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-xl text-white font-roboto font-medium group-hover:bg-opacity-50 transition">
+                    Mel 1</a>
+            </div>
+        </div>
+    </div>
+     fim categorias -->
+
+    <!-- produtct wrapper -->
+    <div class="container pb-16 mx-auto">
+        <h2 class="text-2xl font-medium text-gray-800 uppercase mb-6">novos</h2>
+
+        <!-- product grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+            <!-- single product -->
+            <div class="bg-white shadow rounded overflow-hidden">
+                <!-- product image -->
+                <div class="relative group">
+                    <img src="./assets/Mel apiario.png" class="w-full h-64 object-cover">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100">
+                        <a href="#"
+                            class="text-white text-lg w-9 h-8 rounded-full bg-yellow-300 flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <a href="#"
+                            class="text-white text-lg w-9 h-8 rounded-full bg-yellow-300 flex items-center justify-center hover:bg-gray-500 transition">
+                            <i class="far fa-heart"></i>
+                        </a>
                     </div>
                 </div>
-                <div>
-                    <button class="buy-button text-white">
-                        <i class="bi bi-cart"></i>
-                    </button>
-                </div>
-                </div>
-            </main>
-            </div>
-            <main>
+                <!-- fim product image -->
 
-                <div class="bg-white justify-center">
-        <!--Produto 3-->
-
-         <!----   <div class="m-60 mr-10 grid grid-cols-2 gap-7 md:gap-10 mx-5 max-w-7xl px-2 mb-16">
-            <img src="./assets/barril.png" alt="barril" class="w-28 h-28 rounded-full shadow-lg m-10 hover:scale-110 hover:-rotate-2 duration-300"/>
-    
-                <div>
-                    <p class="font-bold">Barril</p>
-                    <p class="text-sm">Barril para armazenamento de mel.</p>
-    
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <span class="price font-bold text-lg">R$ 100,00</span>
+                <!-- product content -->
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4
+                            class="uppercase font-medium text-xl sm:text-2xl mb-2 text-gray-800 hover:text-blue-500 transition">
+                            Mel Silvestre
+                        </h4>
+                    </a>
+                    <div class="flex items-baseline mb-1 space-x-2 font-roboto">
+                        <p class="text-xl text-black font-semibold">R$45,00</p>
+                        <p class="text-sm text-gray-400 line-through">R$60,00</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="flex gap-1 text-sm text-yellow-400">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="text-xs text-gray-500 ml-3">(150)</div>
                     </div>
                 </div>
-                <div>
-                    <button  class="buy-button"
-                     data-name="Barril"
-                     data-price="R$ 100,00">
-                      <i class="bi bi-cart"></i>
-                    </button>
-                </div>
-                </div>
-            </main>
+               <!--- <button
+                    class="block w-full py-1 text-center text-white bg-black border-2 border-black rounded-b hover:bg-yellow-300 hover:text-black transition">
+                    Adicione ao carrinho
+                </button>
+                 fim product content  -->
             </div>
-    
+            <!-- fim produt -->
 
-        <!--FIM DO PRODUTO ITEM-->
-    <!--fIM DO MENU-->
+            <!-- single product -->
+            <div class="bg-white shadow rounded overflow-hidden">
+                <!-- product image -->
+                <div class="relative group">
+                    <img src="./assets/Mel apiario.png" class="w-full h-64 object-cover">
+                    <div
+                        class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100">
+                        <a href="#"
+                            class="text-white text-lg w-9 h-8 rounded-full bg-yellow-300 flex items-center justify-center hover:bg-gray-800 transition">
+                            <i class="fas fa-search"></i>
+                        </a>
+                        <a href="#"
+                            class="text-white text-lg w-9 h-8 rounded-full bg-yellow-300 flex items-center justify-center hover:bg-gray-500 transition">
+                            <i class="far fa-heart"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- fim product image -->
 
-<!--Modelo do carriho-->
+                <!-- product content -->
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4
+                            class="uppercase font-medium text-xl sm:text-2xl mb-2 text-gray-800 hover:text-blue-500 transition">
+                            Própolis
+                        </h4>
+                    </a>
+                    <div class="flex items-baseline mb-1 space-x-2 font-roboto">
+                        <p class="text-xl text-black font-semibold">R$15,00</p>
+                        <p class="text-sm text-gray-400 line-through">R$30,00</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="flex gap-1 text-sm text-yellow-400">
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                            <span><i class="fas fa-star"></i></span>
+                        </div>
+                        <div class="text-xs text-gray-500 ml-3">(150)</div>
+                    </div>
+                </div>
+                <!--<button
+                    class="block w-full py-1 text-center text-white bg-black border-2 border-black rounded-b hover:bg-yellow-300 hover:text-black transition">
+                    Adicione ao carrinho
+                </button>
+                fim product content  -->
+            </div>
+            <!-- fim produt -->
+        </div>
+        <!-- fim procuct grid -->
+    </div>
+    <!-- fim product wrapper -->
 
-   <!---- <footer class="M-full bg-white py-3 bottom-0 z-40 flex items-center justify-center">
-        <button  class="flex items-center gap-2" 
-                id="carrinho">
-            (<span id="cart-count">2</span>)
-             Ver meu carrinho
-            <i class="bi bi-cart"></i>
-        </button>
+    <!-- footer -->
+    <footer class="bg-white pt-16 pb-12 border-t border-gray-100">
+        <div class="container grid grid-cols-3 gap-x-12 mx-auto">
+            <!-- footer text -->
+            <div class="col-span-1 space-y-8">
+                <img src="./assets/image_footer.png" class="w-30">
+                <!--<p class="text-gray-500">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem facilis laboriosam
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-x"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-gray-500">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- footer text end -->
+
+            <!-- footer links -->
+            <div class="col-span-2 grid grid-cols-2 gap-8">
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="">
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Solutions</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Marketing</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Analíticos</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Comércio</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Insights</a>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Solutions</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Marketing</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Analíticos</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Comércio</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Insights</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-8">
+                    <div class="flex flex-col">
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Políticas de
+                            Privacidade</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">LGPD</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Política</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Privacidade</a>
+                            <a href="#" class="text-base text-gray-500 hover:text-gray-900 block">Terms</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer links end -->
+        </div>
     </footer>
+    <!-- footer end -->
+
+    <!-- copyright -->
+    <div class="bg-black py-4">
+        <div class="container flex items-center justify-between mx-auto">
+            <p class="text-white">© APIÁRIO DO REINO MEL PURO - All Rights Reserved</p>
+            <img src="./assets/image_payment.png" class="h-20">
+        </div>
+    </div>
+    <!-- copyright end -->
+
+    <div class="whats w-10"><!---botão do whatsapp-->
+        <a href="//wa.me/5524998776369?text=Estou interessado em algum(s) produtos" target="_blank"
+            rel="noopener noreferrer">
+            <img src="./assets/whatsapp1.png" width="75" alt="Fale conosco através do whatsapp"
+                title="Fale conosco através do whatsapp">
+        </a>
+    </div>
+
 </body>
+
 </html>
