@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="script_carrinho.js"></script>
+    <title>Carrinho de Compras - Mel Puro Apiário</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🐝</span>
+                    <span>Mel Puro</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="produto.html">Produtos</a></li>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+                <div class="cart-icon">
+                    <a href="carrinho.html">🛒</a>
+                    <span class="cart-count">3</span>
+                    
+                    <!-- Mini Cart -->
+                    <div class="mini-cart">
+                        <div class="mini-cart-header">
+                            <h3>Seu Carrinho</h3>
+                            <span class="mini-cart-count">3</span>
+                        </div>
+                        <div class="mini-cart-items">
+                            <div class="mini-cart-item">
+                                <div class="mini-cart-img">
+                                    <img src="/api/placeholder/50/50" alt="Mel Silvestre">
+                                </div>
+                                <div class="mini-cart-info">
+                                    <div class="mini-cart-title">Mel Silvestre Puro</div>
+                                    <div class="mini-cart-price">R$ 42,50</div>
+                                    <div class="mini-cart-quantity">Qtd: 1</div>
+                                </div>
+                                <button class="mini-cart-remove">✕</button>
+                            </div>
+                            <div class="mini-cart-item">
+                                <div class="mini-cart-img">
+                                    <img src="/api/placeholder/50/50" alt="Extrato de Própolis">
+                                </div>
+                                <div class="mini-cart-info">
+                                    <div class="mini-cart-title">Extrato de Própolis</div>
+                                    <div class="mini-cart-price">R$ 35,90</div>
+                                    <div class="mini-cart-quantity">Qtd: 1</div>
+                                </div>
+                                <button class="mini-cart-remove">✕</button>
+                            </div>
+                            <div class="mini-cart-item">
+                                <div class="mini-cart-img">
+                                    <img src="/api/placeholder/50/50" alt="Pólen de Abelha">
+                                </div>
+                                <div class="mini-cart-info">
+                                    <div class="mini-cart-title">Pólen de Abelha</div>
+                                    <div class="mini-cart-price">R$ 45,90</div>
+                                    <div class="mini-cart-quantity">Qtd: 1</div>
+                                </div>
+                                <button class="mini-cart-remove">✕</button>
+                            </div>
+                        </div>
+                        <div class="mini-cart-footer">
+                            <div class="mini-cart-total">
+                                <span>Total:</span>
+                                <span>R$ 124,30</span>
+                            </div>
+                            <div class="mini-cart-buttons">
+                                <a href="carrinho.html" class="btn-cart">Ver Carrinho</a>
+                                <a href="checkout.html" class="btn-checkout">Finalizar</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Empty State (hidden by default) -->
+                        <div class="mini-cart-empty" style="display: none;">
+                            <div class="mini-cart-empty-icon">🛒</div>
+                            <p>Seu carrinho está vazio</p>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Carrinho de Compras</h1>
+            <ul class="breadcrumb">
+                <li><a href="index.html">Início</a></li>
+                <li class="separator">/</li>
+                <li class="current">Carrinho</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Cart with Items -->
+        <div class="cart-container">
+            <div class="cart-header">
+                <div>Produto</div>
+                <div>Descrição</div>
+                <div>Preço</div>
+                <div>Quantidade</div>
+                <div>Subtotal</div>
+                <div></div>
+            </div>
+            <div class="cart-items">
+                <div class="cart-item">
+                    <div class="cart-img">
+                        <img src="/api/placeholder/80/80" alt="Mel Silvestre">
+                    </div>
+                    <div class="cart-product-info">
+                        <h3>Mel Silvestre Puro</h3>
+                        <div class="cart-product-details">500g</div>
+                    </div>
+                    <div class="cart-price">R$ 42,50</div>
+                    <div class="cart-quantity">
+                        <div class="quantity-btn minus">-</div>
+                        <input type="text" class="quantity-input" value="1">
+                        <div class="quantity-btn plus">+</div>
+                    </div>
+                    <div class="subtotal">R$ 42,50</div>
+                    <button class="remove-item">✕</button>
+                </div>
+                <div class="cart-item">
+                    <div class="cart-img">
+                        <img src="/api/placeholder/80/80" alt="Extrato de Própolis">
+                    </div>
+                    <div class="cart-product-info">
+                        <h3>Extrato de Própolis</h3>
+                        <div class="cart-product-details">30ml</div>
+                    </div>
+                    <div class="cart-price">R$ 35,90</div>
+                    <div class="cart-quantity">
+                        <div class="quantity-btn minus">-</div>
+                        <input type="text" class="quantity-input" value="1">
+                        <div class="quantity-btn plus">+</div>
+                    </div>
+                    <div class="subtotal">R$ 35,90</div>
+                    <button class="remove-item">✕</button>
+                </div>
+                <div class="cart-item">
+                    <div class="cart-img">
+                        <img src="/api/placeholder/80/80" alt="Pólen de Abelha">
+                    </div>
+                    <div class="cart-product-info">
+                        <h3>Pólen de Abelha</h3>
+                        <div class="cart-product-details">100g</div>
+                    </div>
+                    <div class="cart-price">R$ 45,90</div>
+                    <div class="cart-quantity">
+                        <div class="quantity-btn minus">-</div>
+                        <input type="text" class="quantity-input" value="1">
+                        <div class="quantity-btn plus">+</div>
+                    </div>
+                    <div class="subtotal">R$ 45,90</div>
+                    <button class="remove-item">✕</button>
+                </div>
+            </div>
+            <div class="cart-actions">
+                <a href="produto.html" class="continue-shopping">
+                    <span class="arrow-icon">←</span> Continuar Comprando
+                </a>
+                <button class="update-cart">Atualizar Carrinho</button>
+            </div>
+        </div>
+
+        <!-- Empty Cart State (initially hidden) -->
+        <div class="cart-empty">
+            <div class="cart-empty-icon">🛒</div>
+            <h2>Seu carrinho está vazio</h2>
+            <p>Parece que você ainda não adicionou nenhum produto ao seu carrinho.</p>
+            <a href="produto.html" class="add-to-cart" style="display: inline-block; margin-top: 20px;">Explorar Produtos</a>
+        </div>
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+            <h2 class="summary-title">Resumo da Compra</h2>
+            <div class="summary-row">
+                <div class="cart-summary">
+                        <div class="summary-row">
+                            <div class="summary-label">Subtotal (0 itens)</div>
+                        </div>
+                    </div>
+                <div class="summary-value">R$ 124,30</div>
+            </div>
+            <div class="summary-row">
+                <div class="summary-label">Frete</div>
+                <div class="summary-value">Calculado no checkout</div>
+            </div>
+            <div class="summary-row summary-total">
+                <div class="summary-label">Total</div>
+                <div class="summary-value">R$ 124,30</div>
+            </div>
+            <button class="checkout-btn">Finalizar Compra</button>
+            
+            <div class="coupon-section">
+                <h3 class="coupon-title">Cupom de Desconto</h3>
+                <p>Se você tem um cupom de desconto, aplique-o abaixo.</p>
+                <div class="coupon-form">
+                    <input type="text" class="coupon-input" placeholder="Código do cupom">
+                    <button class="apply-coupon">Aplicar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- You May Also Like Section -->
+        <section class="suggestions">
+            <h2 class="suggestions-title">Você Também Pode Gostar</h2>
+            <div class="suggestions-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/160/160" alt="Mel de Laranjeira">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Mel</div>
+                        <h3 class="product-title">Mel de Laranjeira</h3>
+                        <div class="price">R$ 48,90</div>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/160/160" alt="Kit Mel e Própolis">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Kit</div>
+                        <h3 class="product-title">Kit Mel e Própolis</h3>
+                        <div class="price">R$ 75,90</div>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/160/160" alt="Própolis Verde">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Própolis</div>
+                        <h3 class="product-title">Própolis Verde</h3>
+                        <div class="price">R$ 39,90</div>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="/api/placeholder/160/160" alt="Mel com Favo">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">Mel</div>
+                        <h3 class="product-title">Mel com Favo</h3>
+                        <div class="price">R$ 54,90</div>
+                        <button class="add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Mel Puro</h3>
+                    <p>Desde 2010 fornecendo mel puro e produtos apícolas de alta qualidade diretamente do produtor para sua casa.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">i</a>
+                        <a href="#" class="social-icon">t</a>
+                        <a href="#" class="social-icon">y</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="produto.html">Produtos</a></li>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Produtos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Mel Silvestre</a></li>
+                        <li><a href="#">Mel de Laranjeira</a></li>
+                        <li><a href="#">Própolis</a></li>
+                        <li><a href="#">Pólen</a></li>
+                        <li><a href="#">Geleia Real</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul class="footer-links">
+                        <li>contato@melpuro.com.br</li>
+                        <li>(11) 9999-9999</li>
+                        <li>Rua das Abelhas, 123</li>
+                        <li>São Paulo - SP</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Mel Puro Apiário. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
