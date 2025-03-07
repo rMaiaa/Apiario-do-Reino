@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
-    <script src="script_carrinho.js"></script>
+    <link rel="stylesheet" href="assets/carrinho_vazio.css">
+    <script src="./script/carrinho.js"></script>
+    <script src="./script/whatsapp_checkout.js"></script>
     <title>Carrinho de Compras - Mel Puro Apiário</title>
 </head>
 <body>
@@ -24,66 +26,7 @@
                 </ul>
                 <div class="cart-icon">
                     <a href="carrinho.html">🛒</a>
-                    <span class="cart-count">3</span>
-                    
-                    <!-- Mini Cart -->
-                    <div class="mini-cart">
-                        <div class="mini-cart-header">
-                            <h3>Seu Carrinho</h3>
-                            <span class="mini-cart-count">3</span>
-                        </div>
-                        <div class="mini-cart-items">
-                            <div class="mini-cart-item">
-                                <div class="mini-cart-img">
-                                    <img src="/api/placeholder/50/50" alt="Mel Silvestre">
-                                </div>
-                                <div class="mini-cart-info">
-                                    <div class="mini-cart-title">Mel Silvestre Puro</div>
-                                    <div class="mini-cart-price">R$ 42,50</div>
-                                    <div class="mini-cart-quantity">Qtd: 1</div>
-                                </div>
-                                <button class="mini-cart-remove">✕</button>
-                            </div>
-                            <div class="mini-cart-item">
-                                <div class="mini-cart-img">
-                                    <img src="/api/placeholder/50/50" alt="Extrato de Própolis">
-                                </div>
-                                <div class="mini-cart-info">
-                                    <div class="mini-cart-title">Extrato de Própolis</div>
-                                    <div class="mini-cart-price">R$ 35,90</div>
-                                    <div class="mini-cart-quantity">Qtd: 1</div>
-                                </div>
-                                <button class="mini-cart-remove">✕</button>
-                            </div>
-                            <div class="mini-cart-item">
-                                <div class="mini-cart-img">
-                                    <img src="/api/placeholder/50/50" alt="Pólen de Abelha">
-                                </div>
-                                <div class="mini-cart-info">
-                                    <div class="mini-cart-title">Pólen de Abelha</div>
-                                    <div class="mini-cart-price">R$ 45,90</div>
-                                    <div class="mini-cart-quantity">Qtd: 1</div>
-                                </div>
-                                <button class="mini-cart-remove">✕</button>
-                            </div>
-                        </div>
-                        <div class="mini-cart-footer">
-                            <div class="mini-cart-total">
-                                <span>Total:</span>
-                                <span>R$ 124,30</span>
-                            </div>
-                            <div class="mini-cart-buttons">
-                                <a href="carrinho.html" class="btn-cart">Ver Carrinho</a>
-                                <a href="checkout.html" class="btn-checkout">Finalizar</a>
-                            </div>
-                        </div>
-                        
-                        <!-- Empty State (hidden by default) -->
-                        <div class="mini-cart-empty" style="display: none;">
-                            <div class="mini-cart-empty-icon">🛒</div>
-                            <p>Seu carrinho está vazio</p>
-                        </div>
-                    </div>
+                    <span class="cart-count"></span>
                 </div>
             </nav>
         </div>
@@ -100,6 +43,35 @@
         </div>
     </section>
 
+    <div class="cart-empty">
+        <div class="bee-decoration" style="top: 10%; left: 20%;"></div>
+        <div class="bee-decoration" style="top: 30%; left: 80%;"></div>
+        
+        <div class="empty-cart-image"></div>
+        <div class="cart-empty-icon">🍯</div>
+        
+        <h2>Seu Carrinho de Mel Está Vazio</h2>
+        <p>Parece que você ainda não adicionou nenhuma doçura ao seu carrinho. Que tal explorar nossos produtos apícolas naturais?</p>
+        
+        <div class="honey-drops">
+            <div class="honey-drop"></div>
+            <div class="honey-drop"></div>
+            <div class="honey-drop"></div>
+        </div>
+        
+        <a href="produto.html" class="explore-button">Descobrir Produtos Apícolas</a>
+        
+        <div class="suggestions-after-empty">
+            <p>Produtos mais vendidos:</p>
+            <div style="display: flex; gap: 10px; justify-content: center; margin-top: 15px;">
+                <div style="border-radius: 50%; width: 50px; height: 50px; background-color: #f9e8c0; display: flex; align-items: center; justify-content: center; font-size: 20px;">🍯</div>
+                <div style="border-radius: 50%; width: 50px; height: 50px; background-color: #f9e8c0; display: flex; align-items: center; justify-content: center; font-size: 20px;">🐝</div>
+                <div style="border-radius: 50%; width: 50px; height: 50px; background-color: #f9e8c0; display: flex; align-items: center; justify-content: center; font-size: 20px;">🌼</div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="container">
         <!-- Cart with Items -->
         <div class="cart-container">
@@ -112,73 +84,7 @@
                 <div></div>
             </div>
             <div class="cart-items">
-                <div class="cart-item">
-                    <div class="cart-img">
-                        <img src="/api/placeholder/80/80" alt="Mel Silvestre">
-                    </div>
-                    <div class="cart-product-info">
-                        <h3>Mel Silvestre Puro</h3>
-                        <div class="cart-product-details">500g</div>
-                    </div>
-                    <div class="cart-price">R$ 42,50</div>
-                    <div class="cart-quantity">
-                        <div class="quantity-btn minus">-</div>
-                        <input type="text" class="quantity-input" value="1">
-                        <div class="quantity-btn plus">+</div>
-                    </div>
-                    <div class="subtotal">R$ 42,50</div>
-                    <button class="remove-item">✕</button>
-                </div>
-                <div class="cart-item">
-                    <div class="cart-img">
-                        <img src="/api/placeholder/80/80" alt="Extrato de Própolis">
-                    </div>
-                    <div class="cart-product-info">
-                        <h3>Extrato de Própolis</h3>
-                        <div class="cart-product-details">30ml</div>
-                    </div>
-                    <div class="cart-price">R$ 35,90</div>
-                    <div class="cart-quantity">
-                        <div class="quantity-btn minus">-</div>
-                        <input type="text" class="quantity-input" value="1">
-                        <div class="quantity-btn plus">+</div>
-                    </div>
-                    <div class="subtotal">R$ 35,90</div>
-                    <button class="remove-item">✕</button>
-                </div>
-                <div class="cart-item">
-                    <div class="cart-img">
-                        <img src="/api/placeholder/80/80" alt="Pólen de Abelha">
-                    </div>
-                    <div class="cart-product-info">
-                        <h3>Pólen de Abelha</h3>
-                        <div class="cart-product-details">100g</div>
-                    </div>
-                    <div class="cart-price">R$ 45,90</div>
-                    <div class="cart-quantity">
-                        <div class="quantity-btn minus">-</div>
-                        <input type="text" class="quantity-input" value="1">
-                        <div class="quantity-btn plus">+</div>
-                    </div>
-                    <div class="subtotal">R$ 45,90</div>
-                    <button class="remove-item">✕</button>
-                </div>
             </div>
-            <div class="cart-actions">
-                <a href="produto.html" class="continue-shopping">
-                    <span class="arrow-icon">←</span> Continuar Comprando
-                </a>
-                <button class="update-cart">Atualizar Carrinho</button>
-            </div>
-        </div>
-
-        <!-- Empty Cart State (initially hidden) -->
-        <div class="cart-empty">
-            <div class="cart-empty-icon">🛒</div>
-            <h2>Seu carrinho está vazio</h2>
-            <p>Parece que você ainda não adicionou nenhum produto ao seu carrinho.</p>
-            <a href="produto.html" class="add-to-cart" style="display: inline-block; margin-top: 20px;">Explorar Produtos</a>
-        </div>
 
         <!-- Cart Summary -->
         <div class="cart-summary">
@@ -189,7 +95,7 @@
                             <div class="summary-label">Subtotal (0 itens)</div>
                         </div>
                     </div>
-                <div class="summary-value">R$ 124,30</div>
+                <div class="summary-value">R$ 0,00</div>
             </div>
             <div class="summary-row">
                 <div class="summary-label">Frete</div>
@@ -197,7 +103,7 @@
             </div>
             <div class="summary-row summary-total">
                 <div class="summary-label">Total</div>
-                <div class="summary-value">R$ 124,30</div>
+                <div class="summary-value">R$ 0,00</div>
             </div>
             <button class="checkout-btn">Finalizar Compra</button>
             

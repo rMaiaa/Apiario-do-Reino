@@ -43,6 +43,7 @@
             color: var(--secondary);
             display: flex;
             align-items: center;
+            margin-left: -190px;
         }
 
         .logo-icon {
@@ -52,11 +53,14 @@
 
         .nav-links {
             display: flex;
+            justify-content: center;
+            align-items: center;
             list-style: none;
+            padding: 0;
         }
 
         .nav-links li {
-            margin-left: 20px;
+            margin-left: 20px;  
         }
 
         .nav-links a {
@@ -1875,4 +1879,8 @@ footer {
     }
 }
 
+
+
 /* Fim carrinho */
+
+
