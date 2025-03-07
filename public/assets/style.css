@@ -347,7 +347,8 @@
             background-color: var(--primary);
             padding: 60px 0;
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 0px !important;
+            
         }
 
         .newsletter h2 {
@@ -387,7 +388,7 @@
         footer {
             background-color: var(--dark);
             color: white;
-            padding: 60px 0 20px;
+            padding: 60px 0px 20px;
         }
 
         .footer-content {

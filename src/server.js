@@ -11,7 +11,7 @@ app.use(express.static('public'));
 
 // Rota principal
 app.get('/', (req, res) => {
-    res.render('index', { title: "Meu E-commerce" });
+    res.render('index', { title: "Ápiario do Reino - Produtos do Apiário" });
 });
 
 // Inicia o servidor
