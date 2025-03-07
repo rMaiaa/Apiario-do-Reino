@@ -19,25 +19,33 @@ class ShoppingCart {
         localStorage.setItem('melPuroCart', JSON.stringify(this.items));
     }
 
-    // Adicionar produto ao carrinho
-    addItem(product) {
+    // Adicionar produto ao carrinho com quantidade específica
+    addItem(product, quantity = 1) {
+        // Garantir que quantity seja um número
+        quantity = parseInt(quantity) || 1;
+        
+        // Verificar se o produto já existe no carrinho
         const existingItem = this.items.find(item => item.id === product.id);
         
         if (existingItem) {
-            existingItem.quantity += 1;
+            // Somar a quantidade ao invés de substituir
+            existingItem.quantity = existingItem.quantity + quantity;
+            console.log(`Item atualizado: ${product.name}, quantidade: ${existingItem.quantity}`);
         } else {
+            // Adicionar novo item
             this.items.push({
                 id: product.id,
                 name: product.name,
                 price: product.price,
                 image: product.image,
-                quantity: 1
+                quantity: quantity
             });
+            console.log(`Novo item adicionado: ${product.name}, quantidade: ${quantity}`);
         }
         
         this.saveToLocalStorage();
         this.updateCartDisplay();
-        this.showNotification(`${product.name} adicionado ao carrinho!`);
+        this.showNotification(`${product.name} adicionadas ao carrinho!`);
     }
 
     // Atualizar quantidade de um item
@@ -241,11 +249,38 @@ function initShoppingCart() {
             const productCard = e.target.closest('.product-card');
             
             if (productCard) {
-                const productId = productCard.dataset.id || Math.random().toString(36).substr(2, 9);
+                // Usar o ID definido no data-id, ou criar um ID fixo baseado no nome do produto
+                // Evitar usar Math.random() que cria um novo ID a cada clique
+                const productId = productCard.dataset.id || 
+                                  productCard.querySelector('.product-title')?.textContent.trim().toLowerCase().replace(/\s+/g, '-');
+                
+                if (!productId) {
+                    console.error('Não foi possível determinar o ID do produto');
+                    return;
+                }
+                
                 const productName = productCard.querySelector('.product-title').textContent;
                 const productPriceText = productCard.querySelector('.price').textContent;
                 const productPrice = parseFloat(productPriceText.replace('R$ ', '').replace(',', '.'));
                 const productImage = productCard.querySelector('.product-img img')?.src;
+                
+                // Verificar se existe um input de quantidade
+                const quantityInput = productCard.querySelector('.quantity-input');
+                // Garantir que quantity seja um número válido
+                let quantity = 1;
+                if (quantityInput) {
+                    const inputValue = parseInt(quantityInput.value);
+                    if (!isNaN(inputValue) && inputValue > 0) {
+                        quantity = inputValue;
+                    }
+                }
+                
+                console.log('Adicionando produto:', {
+                    id: productId,
+                    name: productName,
+                    price: productPrice,
+                    quantity: quantity
+                });
                 
                 const product = {
                     id: productId,
@@ -254,7 +289,8 @@ function initShoppingCart() {
                     image: productImage
                 };
                 
-                cart.addItem(product);
+                // Explicitamente passar a quantidade como segundo argumento
+                cart.addItem(product, quantity);
             }
         }
     });
