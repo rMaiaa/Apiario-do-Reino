@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/assets/style.css">
+    <link rel="stylesheet" href="./public/assets/contatos.css">
     <script src="./public/script/carrinho.js"></script>
-    <script src="./public/script/add_check.js"></script>
-    <title>Contato</title>
+    <title>Ápiario do Reino - Contatos</title>
 </head>
 <body>
     <header>
@@ -19,9 +19,9 @@
                 <ul class="nav-links">
                     <li><a href="index.html">Início</a></li>
                     <li><a href="produto.html">Produtos</a></li>
-                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="sobre.html">Sobre nós</a></li>
                     <li><a href="#">Blog</a></li>
-                    <li><a href="contatos.html">Contato</a></li>
+                    <li><a href="#" class="active">Contato</a></li>
                 </ul>
                 <div class="cart-icon">
                     <a href="carrinho.html">🛒</a>
@@ -30,24 +30,220 @@
             </nav>
         </div>
     </header>
-    <div class="container mx-auto text-center space-y-8 px-3">
-        <div>
-            <h2 style="color: gray;font-size: xx-large;">Contate-nos</h2>
-            <p style="color:rgb(70, 69, 69,0.5); font-size: x-large;">Especialistas em apicultura!</p>
-            <p style="color: rgb(70, 69, 69,0.5);font-size: larger;">Edmilson Guillherme e Gleidson Caetano</p>
-            <p style="color:black"><button style="color: green;">
-                    <i class="bi bi-whatsapp"></i>
-                </button> (24) 99877-6369</p>
+
+    <section class="hero small-hero">
+        <div class="hero-content">
+            <h1>Entre em Contato</h1>
+            <p>Estamos aqui para responder suas dúvidas, receber sugestões ou ajudar com o seu pedido.</p>
         </div>
-        <form action="#" method="POST" class="space-y-6">
-            <input type="text" style="display: flex ;font-size: medium;border-radius: 5px;"
-                placeholder="Seu Nome"><br>
-            <input type="text" style="display: flex ;font-size: medium;border-radius: 5px;"
-                placeholder="Seu E-mail"><br>
-             <input type="text" style="display: flex;font-size: medium;border-radius: 5px;"
-                placeholder="Sua Mensagem"><br>
-            <button type="submit"
-                style=" transition: all 0.3s ease;cursor:pointer;display:  flex; width: 60px;font-size: medium;border-color: yellow;border-radius: 5px;margin-bottom: 1em; background-color:yellow;">Enviar</button>
-        </form>
+    </section>
+
+    <div class="container">
+        <section class="contact-section">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2 class="section-title">Informações de Contato</h2>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h3>Telefone</h3>
+                                <p>(11) 99999-9999</p>
+                                <p>(11) 5555-5555</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h3>Email</h3>
+                                <p>contato@melpuro.com.br</p>
+                                <p>vendas@melpuro.com.br</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🏠</div>
+                            <div>
+                                <h3>Endereço</h3>
+                                <p>Rua das Abelhas, 123</p>
+                                <p>Jardim Florido - São Paulo/SP</p>
+                                <p>CEP: 04000-000</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">⏰</div>
+                            <div>
+                                <h3>Horário de Atendimento</h3>
+                                <p>Segunda a Sexta: 9h às 18h</p>
+                                <p>Sábado: 9h às 13h</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-contact">
+                        <h3>Redes Sociais</h3>
+                        <div class="social-links">
+                            <a href="#" class="social-icon">f</a>
+                            <a href="#" class="social-icon">t</a>
+                            <a href="#" class="social-icon">in</a>
+                            <a href="#" class="social-icon">ig</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h2 class="section-title">Envie uma Mensagem</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <select id="subject" name="subject">
+                                <option value="duvida">Dúvida sobre produto</option>
+                                <option value="pedido">Informação sobre pedido</option>
+                                <option value="reclamacao">Reclamação</option>
+                                <option value="sugestao">Sugestão</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn submit-btn">Enviar Mensagem</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <h2 class="section-title">Nossa Localização</h2>
+            <div class="map-container">
+                <!-- Iframe do Google Maps -->
+                <div class="google-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29651.083417503225!2d-44.116956!3d-22.5230967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9e9caa81835e513%3A0x3aeff4f8dc4501d1!2sVolta%20Redonda%2C%20RJ!5e0!3m2!1spt-BR!2sbr!4v1710599462123!5m2!1spt-BR!2sbr"
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <div class="map-details">
+                    <div class="address-card">
+                        <h3>Ápiario do Reino</h3>
+                        <p><strong>Endereço:</strong> Rua 1043, Bloco 140, nº 34</p>
+                        <p><strong>Bairro:</strong> Centro</p>
+                        <p><strong>Cidade:</strong> Volta Redonda - RJ</p>
+                        <p><strong>CEP:</strong> 27000-000</p>
+                        <p class="directions-info">Estamos localizados próximo ao centro comercial de Volta Redonda. Referência: A duas quadras da Praça Principal.</p>
+                    </div>
+                    <div class="visit-info">
+                        <h4>Como chegar:</h4>
+                        <ul>
+                            <li>De carro: Estacionamento disponível no local</li>
+                            <li>Transporte público: Linhas de ônibus 101, 203 e 305 param a 100m da loja</li>
+                            <li>A pé: 10 minutos caminhando da estação rodoviária</li>
+                        </ul>
+                        <p class="visit-hours"><strong>Horário de visitação:</strong> Segunda a Sexta das 9h às 18h e Sábados das 9h às 13h</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3 class="faq-question">Como posso acompanhar meu pedido?</h3>
+                    <p class="faq-answer">Você receberá um código de rastreio por e-mail assim que seu pedido for despachado. Com esse código, é possível acompanhar o status da entrega diretamente no site dos Correios ou em sua conta na nossa loja.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Qual o prazo de entrega dos produtos?</h3>
+                    <p class="faq-answer">O prazo de entrega varia de acordo com a sua localização, mas geralmente fica entre 3 a 10 dias úteis após a confirmação do pagamento.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Como faço para trocar um produto?</h3>
+                    <p class="faq-answer">Para solicitar uma troca, entre em contato com nossa equipe em até 7 dias após o recebimento do produto. É necessário que o produto esteja na embalagem original e sem sinais de uso.</p>
+                </div>
+                <div class="faq-item">
+                    <h3 class="faq-question">Vocês fazem frete grátis?</h3>
+                    <p class="faq-answer">Sim! Para compras acima de R$ 150,00, oferecemos frete grátis para todo o Brasil.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="newsletter">
+        <div class="container">
+            <h2>Receba Nossas Novidades</h2>
+            <p>Inscreva-se em nossa newsletter e receba ofertas exclusivas, dicas sobre os benefícios do mel e novidades do nosso apiário.</p>
+            <form class="newsletter-form">
+                <input type="email" class="newsletter-input" placeholder="Seu melhor e-mail">
+                <button type="submit" class="newsletter-btn">Inscrever-se</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Ápiario do Reino</h3>
+                    <p>Produtos artesanais de apiário desde 2010. Comprometidos com a qualidade e a sustentabilidade.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-icon">f</a>
+                        <a href="#" class="social-icon">t</a>
+                        <a href="#" class="social-icon">in</a>
+                        <a href="#" class="social-icon">ig</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Categorias</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Todos os Méis</a></li>
+                        <li><a href="#">Própolis e Extratos</a></li>
+                        <li><a href="#">Cosméticos Naturais</a></li>
+                        <li><a href="#">Pólen e Geleia Real</a></li>
+                        <li><a href="#">Kits e Presentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Informações</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Nosso Apiário</a></li>
+                        <li><a href="#">Dúvidas Frequentes</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul class="footer-links">
+                        <li>📞 (11) 99999-9999</li>
+                        <li>✉️ contato@melpuro.com.br</li>
+                        <li>🏠 Rua das Abelhas, 123<br>Jardim Florido - SP</li>
+                        <li>⏰ Seg-Sex: 9h às 18h</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Ápiario do Reino - Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
