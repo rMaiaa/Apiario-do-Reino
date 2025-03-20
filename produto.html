@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./public/assets/style.css">
+    <link rel="stylesheet" href="./public/assets/page_produto.css">
     <script src="./public/script/carrinho.js"></script>
     <script src="./public/script/add_check.js"></script>
+    <script src="./public/script/busca_produto.js"></script>
+    <script src="./public/script/filtro_preço.js"></script>
     <title>Produtos - Ápiario do Reino</title>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -21,7 +25,6 @@
                     <li><a href="index.html">Início</a></li>
                     <li><a href="produto.html" class="active">Produtos</a></li>
                     <li><a href="sobre.html">Sobre Nós</a></li>
-                    <li><a href="#">Blog</a></li>
                     <li><a href="contatos.html">Contato</a></li>
                 </ul>
                 <div class="cart-icon">
@@ -33,493 +36,291 @@
         </div>
     </header>
 
-    <section class="page-header">
-        <div class="container">
-            <h1>Nossos Produtos</h1>
-            <ul class="breadcrumb">
-                <li><a href="index.html">Início</a></li>
-                <li class="separator">/</li>
-                <li class="current">Produtos</li>
-            </ul>
-        </div>
-    </section>
-
+        
+    <!-- Main Content -->
     <div class="container">
-        <div class="product-controls">
-            <div class="filter-section">
-                <h3>Filtro Rápido:</h3>
-                <div class="filter-container">
-                    <button class="filter-btn active">Todos</button>
-                    <button class="filter-btn">Mel</button>
-                    <button class="filter-btn">Própolis</button>
-                    <!--<button class="filter-btn">Cosméticos</button>-->
-                    <!--<button class="filter-btn">Pólen</button>-->
-                    <button class="filter-btn">Kits</button>
-                   <!--- <button class="filter-btn">Orgânico</button>-->
-                    <button class="filter-btn">Promoções</button>
-                </div>
+        <div class="search-section">
+            <div class="search-header">
+                <h1 class="search-title">Busca de Preços</h1>
             </div>
-            <div class="sort-section">
-                <select class="sort-select">
-                    <option value="relevancia">Relevância</option>
-                    <option value="menor-preco">Menor Preço</option>
-                    <option value="maior-preco">Maior Preço</option>
-                    <option value="mais-vendidos">Mais Vendidos</option>
-                    <option value="avaliacao">Melhor Avaliação</option>
-                    <option value="lancamentos">Lançamentos</option>
-                </select>
+            <div class="search-bar">
+                <input type="text" class="search-input" placeholder="Busque por produtos...">
+                <button class="search-button">Buscar</button>
             </div>
         </div>
-
-        <div class="content-wrapper">
-            <aside class="sidebar">
-                <div class="category-nav">
-                    <h3 class="category-title">Categorias</h3>
+        
+        <div class="content-with-sidebar">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-section">
+                    <h2 class="sidebar-title">Categorias</h2>
                     <ul class="category-list">
-                        <li><a href="#">Mel <span class="category-count">4</span></a></li>
-                        <li><a href="#">Própolis <span class="category-count">1</span></a></li>
-                      <!--  <li><a href="#">Cosméticos <span class="category-count">9</span></a></li>-->
-                      <!--  <li><a href="#">Pólen <span class="category-count">3</span></a></li>-->
-                        <li><a href="#">Cera <span class="category-count">2</span></a></li>
-                        <li><a href="#">Kits e Presentes <span class="category-count">2</span></a></li>
-                        <li><a href="#">Acessórios <span class="category-count">1</span></a></li>
+                        <li class="category-item">
+                            <span>Mel</span>
+                            <span class="category-count">4</span>
+                        </li>
+                        <li class="category-item">
+                            <span>Própolis</span>
+                            <span class="category-count">1</span>
+                        </li>
+                        <li class="category-item">
+                            <span>Cera</span>
+                            <span class="category-count">2</span>
+                        </li>
+                        <li class="category-item">
+                            <span>Kits e Presentes</span>
+                            <span class="category-count">2</span>
+                        </li>
+                        <li class="category-item">
+                            <span>Acessórios</span>
+                            <span class="category-count">1</span>
+                        </li>
                     </ul>
                 </div>
-
-                <div class="price-filter">
-                    <h3 class="category-title">Preço</h3>
-                    <div class="price-inputs">
-                        <input type="text" class="price-input" placeholder="Min" value="0">
-                        <input type="text" class="price-input" placeholder="Max" value="200">
+                
+                <div class="sidebar-section">
+                    <h2 class="sidebar-title">Preço</h2>
+                    <div class="price-range">
+                        <div class="price-inputs">
+                            <input type="number" class="price-input" placeholder="R$ Min">
+                            <input type="number" class="price-input" placeholder="R$ Max">
+                        </div>
+                        <input type="range" class="price-slider" min="0" max="100" value="50">
+                        <button class="apply-button">Aplicar</button>
                     </div>
-                    <input type="range" class="price-slider" min="0" max="200" value="200">
-                    <button class="filter-apply">Aplicar</button>
                 </div>
-
-                <div class="category-nav">
-                    <h3 class="category-title">Tipos de Mel</h3>
+                
+                <div class="sidebar-section">
+                    <h2 class="sidebar-title">Tipos de Mel</h2>
                     <ul class="category-list">
-                        <li><a href="#">Silvestre <span class="category-count">3</span></a></li>
-                        <li><a href="#">Eucalipto <span class="category-count">2</span></a></li>
-                        <li><a href="#">Laranjeira <span class="category-count">2</span></a></li>
-                        <li><a href="#">Com Favo <span class="category-count">1</span></a></li>
-                        <li><a href="#">Orgânico <span class="category-count">4</span></a></li>
+                        <li class="category-item">
+                            <span>Silvestre</span>
+                            <span class="category-count">3</span>
+                        </li>
+                        <li class="category-item">
+                            <span>Eucalipto</span>
+                            <span class="category-count">2</span>
+                        </li>
+                        <li class="category-item">
+                            <span>Laranjeira</span>
+                            <span class="category-count">1</span>
+                        </li>
+                        <li class="category-item">
+                            <span>Com Favo</span>
+                            <span class="category-count">2</span>
+                        </li>
                     </ul>
                 </div>
-            </aside>
-
-            <main class="main-content">
-                <div class="products-grid">
-                    <!-- Categoria: Mel -->
+            </div>
+            
+            <!-- Main Content -->
+            <div class="main-content">
+                <div class="filter-section">
+                    <button class="filter-button active">Todos</button>
+                    <button class="filter-button">Mel</button>
+                    <button class="filter-button">Própolis</button>
+                    <button class="filter-button">Kits</button>
+                    <button class="filter-button">Promoções</button>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <span style="color: black;">Exibindo 6 produtos</span>
+                    <select class="sort-select">
+                        <option value="price-asc">Menor Preço</option>
+                        <option value="price-desc">Maior Preço</option>
+                        <option value="name-asc">Nome (A-Z)</option>
+                        <option value="name-desc">Nome (Z-A)</option>
+                        <option value="rating">Avaliações</option>
+                    </select>
+                </div>
+                
+                <div class="results-grid">
+                    <!-- Product 1 -->
                     <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Mel Silvestre">
-                            <span class="badge sale-badge">-20%</span>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Mel</div>
+                        <div class="discount-badge">-20%</div>
+                        <img src="/api/placeholder/250/200" alt="Mel Silvestre" class="product-image">
+                        <div class="product-details">
+                            <div class="product-category">MEL</div>
                             <h3 class="product-title">Mel Silvestre Puro</h3>
-                            <div class="product-weight">500g</div>
-                            <div class="rating">★★★★★ (32)</div>
-                            <div class="price">
-                                R$ 25,00
-                                <span class="original-price">R$ 30,00</span>
+                            <div>500g</div>
+                            <div class="product-rating">
+                                <div class="stars">★★★★★</div>
+                                <div class="rating-count">(32)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="current-price">R$ 25,00</div>
+                                <div class="old-price">R$ 30,00</div>
                             </div>
                             <button class="add-to-cart">Adicionar ao Carrinho</button>
                         </div>
                     </div>
-
+                    
+                    <!-- Product 2 -->
                     <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Mel Silvestre Premium">
-                            <span class="badge organic-badge">-20%</span>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Mel</div>
+                        <div class="discount-badge">-20%</div>
+                        <img src="/api/placeholder/250/200" alt="Mel Silvestre Premium" class="product-image">
+                        <div class="product-details">
+                            <div class="product-category">MEL</div>
                             <h3 class="product-title">Mel Silvestre Puro</h3>
-                            <div class="product-weight">1kg</div>
-                            <div class="rating">★★★★★ (18)</div>
-                            <div class="price">
-                                R$ 50,00
-                                <span class="original-price">R$ 60,00</span>
+                            <div>1kg</div>
+                            <div class="product-rating">
+                                <div class="stars">★★★★★</div>
+                                <div class="rating-count">(18)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="current-price">R$ 50,00</div>
+                                <div class="old-price">R$ 60,00</div>
                             </div>
                             <button class="add-to-cart">Adicionar ao Carrinho</button>
                         </div>
                     </div>
-
-                  <!---  <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Mel de Laranjeira">
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Mel</div>
-                            <h3 class="product-title">Mel de Laranjeira</h3>
-                            <div class="product-weight">500g</div>
-                            <div class="rating">★★★★☆ (23)</div>
-                            <div class="price">
-                                R$ 48,90
-                            </div>
-                            <button class="add-to-cart">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>-->
-
-                  <!---   <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Mel de Eucalipto">
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Mel</div>
-                            <h3 class="product-title">Mel de Eucalipto</h3>
-                            <div class="product-weight">500g</div>
-                            <div class="rating">★★★★☆ (15)</div>
-                            <div class="price">
-                                R$ 45,90
-                            </div>
-                            <button class="add-to-cart">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>-->
-
+                    
+                    <!-- Product 3 -->
                     <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Mel com Favo">
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Mel</div>
+                        <img src="/api/placeholder/250/200" alt="Mel com Favo" class="product-image">
+                        <div class="product-details">
+                            <div class="product-category">MEL</div>
                             <h3 class="product-title">Mel com Favo</h3>
-                            <div class="product-weight">500g</div>
-                            <div class="rating">★★★★★ (19)</div>
-                            <div class="price">
-                                R$ 30,00
+                            <div>500g</div>
+                            <div class="product-rating">
+                                <div class="stars">★★★★★</div>
+                                <div class="rating-count">(19)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="current-price">R$ 30,00</div>
                             </div>
                             <button class="add-to-cart">Adicionar ao Carrinho</button>
                         </div>
                     </div>
-
-                    <!-- Categoria: Própolis -->
+                    
+                    
+                    <!-- Product 4 -->
                     <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Própolis">
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Própolis</div>
-                            <h3 class="product-title">Extrato de Própolis</h3>
-                            <div class="product-weight">20ml</div>
-                            <div class="rating">★★★★☆ (27)</div>
-                            <div class="price">
-                                R$ 12,00
-                            </div>
-                            <button class="add-to-cart">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Mel com favo 1kg">
-                            <span class="badge new-badge">Novo</span>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Mel</div>
+                        <div class="new-badge">Novo</div>
+                        <img src="/api/placeholder/250/200" alt="Mel com favo 1kg" class="product-image">
+                        <div class="product-details">
+                            <div class="product-category">MEL</div>
                             <h3 class="product-title">Mel com favo</h3>
-                            <div class="product-weight">1kg</div>
-                            <div class="rating">★★★★☆ (9)</div>
-                            <div class="price">
-                                R$ 60,00
+                            <div>1kg</div>
+                            <div class="product-rating">
+                                <div class="stars">★★★★☆</div>
+                                <div class="rating-count">(8)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="current-price">R$ 55,00</div>
                             </div>
                             <button class="add-to-cart">Adicionar ao Carrinho</button>
                         </div>
                     </div>
 
-                    <!---<div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Extrato de Própolis Verde">
-                            <span class="badge organic-badge">Orgânico</span>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Própolis</div>
-                            <h3 class="product-title">Extrato de Própolis Verde</h3>
-                            <div class="product-weight">30ml</div>
-                            <div class="rating">★★★★★ (35)</div>
-                            <div class="price">
-                                R$ 45,90
+                               <!-- Product 5 -->
+                    <div class="product-card">
+                        <img src="/api/placeholder/250/200" alt="Própolis" class="product-image">
+                        <div class="product-details">
+                            <div class="product-category">PRÓPOLIS</div>
+                            <h3 class="product-title">Extrato de Própolis</h3>
+                            <div>30ml</div>
+                            <div class="product-rating">
+                                <div class="stars">★★★★☆</div>
+                                <div class="rating-count">(12)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="current-price">R$ 35,00</div>
                             </div>
                             <button class="add-to-cart">Adicionar ao Carrinho</button>
                         </div>
-                    </div>-->
-
-                    <!-- Categoria: Cosméticos -->
+                    </div>
+                    
+                    <!-- Product 6 -->
                     <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Cera bruta">
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Cera</div>
+                        <img src="/api/placeholder/250/200" alt="Cera bruta" class="product-image">
+                        <div class="product-details">
+                            <div class="product-category">CERA</div>
                             <h3 class="product-title">Cera bruta</h3>
-                            <div class="product-weight">1kg</div>
-                            <div class="rating">★★★★☆ (14)</div>
-                            <div class="price">
-                                R$ 55,00
+                            <div>250g</div>
+                            <div class="product-rating">
+                                <div class="stars">★★★★☆</div>
+                                <div class="rating-count">(5)</div>
+                            </div>
+                            <div class="product-price">
+                                <div class="current-price">R$ 28,00</div>
                             </div>
                             <button class="add-to-cart">Adicionar ao Carrinho</button>
                         </div>
                     </div>
-
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Cera aveolada">
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Cera</div>
-                            <h3 class="product-title">Cera aveolada</h3>
-                            <div class="product-weight">1kg</div>
-                            <div class="rating">★★★★★ (12)</div>
-                            <div class="price">
-                                R$ 88,00
-                            </div>
-                            <button class="add-to-cart">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-
-                   <!-- <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Lip Balm de Mel">
-                            <span class="badge new-badge">Novo</span>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Cosméticos</div>
-                            <h3 class="product-title">Lip Balm de Mel</h3>
-                            <div class="product-weight">15g</div>
-                            <div class="rating">★★★★☆ (8)</div>
-                            <div class="price">
-                                R$ 15,90
-                            </div>
-                            <button class="add-to-cart">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-
-                     Categoria: Pólen 
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Pólen">
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Pólen</div>
-                            <h3 class="product-title">Pólen de Abelha</h3>
-                            <div class="product-weight">100g</div>
-                            <div class="rating">★★★★☆ (16)</div>
-                            <div class="price">
-                                R$ 45,90
-                            </div>
-                            <button class="add-to-cart">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-
-                     Continuação da Categoria: Pólen
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Pólen Orgânico">
-                            <span class="badge organic-badge">Orgânico</span>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Pólen</div>
-                            <h3 class="product-title">Pólen Orgânico</h3>
-                            <div class="product-weight">200g</div>
-                            <div class="rating">★★★★★ (22)</div>
-                            <div class="price">
-                                R$ 79,90
-                            </div>
-                            <button class="add-to-cart">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-
-                     Categoria: Geleia Real 
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Geleia Real Fresca">
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Geleia Real</div>
-                            <h3 class="product-title">Geleia Real Fresca</h3>
-                            <div class="product-weight">20g</div>
-                            <div class="rating">★★★★★ (28)</div>
-                            <div class="price">
-                                R$ 69,90
-                            </div>
-                            <button class="add-to-cart">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Geleia Real Liofilizada">
-                            <span class="badge sale-badge">-10%</span>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Geleia Real</div>
-                            <h3 class="product-title">Geleia Real Liofilizada</h3>
-                            <div class="product-weight">30g</div>
-                            <div class="rating">★★★★☆ (11)</div>
-                            <div class="price">
-                                R$ 76,50
-                                <span class="original-price">R$ 85,00</span>
-                            </div>
-                            <button class="add-to-cart">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-
-                     Categoria: Kits e Presentes 
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Kit Presente">
-                            <span class="badge new-badge">Novo</span>
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Kits</div>
-                            <h3 class="product-title">Kit Essencial Abelha</h3>
-                            <div class="product-weight">3 itens</div>
-                            <div class="rating">★★★★★ (7)</div>
-                            <div class="price">
-                                R$ 129,90
-                            </div>
-                            <button class="add-to-cart">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Kit Degustação">
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Kits</div>
-                            <h3 class="product-title">Kit Degustação de Méis</h3>
-                            <div class="product-weight">4 x 150g</div>
-                            <div class="rating">★★★★☆ (19)</div>
-                            <div class="price">
-                                R$ 149,90
-                            </div>
-                            <button class="add-to-cart">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-
-                     Categoria: Acessórios 
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Colher de Mel">
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Acessórios</div>
-                            <h3 class="product-title">Colher de Madeira para Mel</h3>
-                            <div class="product-weight">15cm</div>
-                            <div class="rating">★★★★☆ (13)</div>
-                            <div class="price">
-                                R$ 24,90
-                            </div>
-                            <button class="add-to-cart">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="/api/placeholder/250/200" alt="Pote de Cerâmica">
-                        </div>
-                        <div class="product-content">
-                            <div class="product-category">Acessórios</div>
-                            <h3 class="product-title">Pote de Cerâmica para Mel</h3>
-                            <div class="product-weight">250ml</div>
-                            <div class="rating">★★★★★ (8)</div>
-                            <div class="price">
-                                R$ 38,90
-                            </div>
-                            <button class="add-to-cart">Adicionar ao Carrinho</button>
-                        </div>
-                    </div>
-                </div>-->
-
-                <!-- Estado vazio (inicialmente oculto) -->
-                <div class="empty-state">
-                    <div class="empty-icon">🔍</div>
-                    <h3>Nenhum produto encontrado</h3>
-                    <p>Tente ajustar seus filtros ou buscar por outro termo.</p>
                 </div>
-
-                <!-- Paginação 
-                <ul class="pagination">
-                    <li class="disabled"><a href="#">«</a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">»</a></li>
-                </ul>-->
-            </main>
+                
+                <!-- Pagination -->
+                <!-- <div class="pagination">
+                    <button class="pagination-button active">1</button>
+                    <button class="pagination-button">2</button>
+                    <button class="pagination-button">3</button>
+                    <button class="pagination-button">></button>
+                </div> -->
+            </div>
         </div>
     </div>
 
-    <!-- Seção Newsletter -->
-    <section class="newsletter">
-        <div class="container">
-            <h2>Assine nossa Newsletter</h2>
-            <p>Receba receitas, dicas de saúde e ofertas exclusivas diretamente no seu e-mail.</p>
-            <form class="newsletter-form">
-                <input type="email" class="newsletter-input" placeholder="Seu endereço de e-mail">
-                <button type="submit" class="newsletter-btn">Assinar</button>
-            </form>
-        </div>
-    </section>
+        <!-- Seção Newsletter -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Assine nossa Newsletter</h2>
+                <p>Receba receitas, dicas de saúde e ofertas exclusivas diretamente no seu e-mail.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Seu endereço de e-mail">
+                    <button type="submit" class="newsletter-btn">Assinar</button>
+                </form>
+            </div>
+        </section>
 
-    <!-- Rodapé -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>Ápiario do Reino</h3>
-                    <p>Produzindo mel de qualidade desde 2022. Nossos produtos são extraídos e processados com todo
-                        cuidado para manter a pureza e propriedades naturais.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-icon">f</a>
-                        <a href="https://www.instagram.com/apiario_do_reino?igsh=MTNwaXFlam90Y3Zubw==" class="social-icon">I</a>
-                        <a href="#" class="social-icon">T</a>
-                        <a href="#" class="social-icon">Y</a>
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-col">
+                        <h3>Ápiario do Reino</h3>
+                        <p>Produtos artesanais de apiário desde 2022. Comprometidos com a qualidade e a sustentabilidade.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-icon">f</a>
+                            <a href="#" class="social-icon">t</a>
+                            <a href="#" class="social-icon">in</a>
+                            <a href="https://www.instagram.com/apiario_do_reino?igsh=MTNwaXFlam90Y3Zubw==" class="social-icon">ig</a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Categorias</h3>
+                        <ul class="footer-links">
+                            <li><a href="#">Todos os Méis</a></li>
+                            <li><a href="#">Própolis e Extratos</a></li>
+                            <li><a href="#">Cosméticos Naturais</a></li>
+                            <!---<li><a href="#">Pólen e Geleia Real</a></li>--->
+                            <!---<li><a href="#">Kits e Presentes</a></li>--->
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Informações</h3>
+                        <ul class="footer-links">
+                            <li><a href="sobre.html">Sobre Nós</a></li>
+                            <li><a href="sobre.html">Nosso Apiário</a></li>
+                            <li><a href="#">Dúvidas Frequentes</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Política de Privacidade</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h3>Contato</h3>
+                        <ul class="footer-links">
+                            <li>📞 (24) 99877-6369</li>
+                            <li>✉️ contato@melpuro.com.br</li>
+                            <li>🏠 Rua A, 256<br>Cotiara ,Barra Mansa - RJ</li>
+                            <li>⏰ Seg-Sex: 9h às 18h</li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="footer-col">
-                    <h3>Links Rápidos</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="produtos.html">Produtos</a></li>
-                        <li><a href="sobre.html">Sobre Nós</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="contatos.html">Contato</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Categorias</h3>
-                    <ul class="footer-links">
-                        <li><a href="categoria_produto/mel.html">Mel</a></li>
-                        <li><a href="#">Própolis</a></li>
-                        <li><a href="#">Cosméticos</a></li>
-                        <li><a href="#">Pólen</a></li>
-                        <li><a href="#">Geleia Real</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Atendimento</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Central de Ajuda</a></li>
-                        <li><a href="#">Política de Entrega</a></li>
-                        <li><a href="#">Trocas e Devoluções</a></li>
-                        <li><a href="#">Política de Privacidade</a></li>
-                        <li><a href="#">Termos e Condições</a></li>
-                    </ul>
+                <div class="copyright">
+                    &copy; 2025 Ápiario do Reino - Todos os direitos reservados.
                 </div>
             </div>
-
-            <div class="copyright">
-                &copy; 2025 Ápiario do Reino. Todos os direitos reservados.
-            </div>
-        </div>
-    </footer>
+        </footer>
 </body>
+
 </html>

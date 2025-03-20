@@ -18,6 +18,11 @@
             color: var(--dark);
             line-height: 1.6;
         }
+        /* Destacar link ativo no menu de navegação */
+        .nav-links .active {
+            color: #f1c40f;
+            font-weight: bold;
+        }
 
         .container {
             max-width: 1200px;
@@ -674,26 +679,16 @@ nav {
     min-width: 300px;
 }
 
-.category-nav {
-    background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.category-title {
-    color: var(--secondary);
-    font-size: 18px;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--light-accent);
+.category-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
 }
 
 .category-list {
     list-style: none;
 }
-
 .category-list li {
     margin-bottom: 10px;
 }
