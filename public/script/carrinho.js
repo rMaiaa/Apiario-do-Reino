@@ -37,7 +37,7 @@ class ShoppingCart {
                 id: product.id,
                 name: product.name,
                 price: product.price,
-                image: product.image,
+             //   image: product.image,
                 quantity: quantity
             });
             console.log(`Novo item adicionado: ${product.name}, quantidade: ${quantity}`);
