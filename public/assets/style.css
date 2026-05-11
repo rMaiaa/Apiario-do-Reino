@@ -100,7 +100,7 @@
         }
 
         .hero {
-            background-image: url('/api/placeholder/1200/400');
+            background-image: url('/public/assets/novo-banner-apiario.jpeg');
             background-size: cover;
             background-position: center;
             height: 400px;
@@ -132,7 +132,9 @@
         .hero h1 {
             font-size: 48px;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+            font-weight: 800;
         }
 
         .hero p {
@@ -146,11 +148,12 @@
             display: inline-block;
             background-color: var(--primary);
             color: var(--secondary);
-            padding: 12px 24px;
-            border-radius: 4px;
+            padding: 15px 32px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
         .btn:hover {
@@ -350,7 +353,7 @@
 
         .newsletter {
             background-color: var(--primary);
-            padding: 60px 0;
+            padding:60px 0;
             text-align: center;
             margin-bottom: 0px !important;
             
@@ -461,8 +464,16 @@
         }
 
         @media (max-width: 768px) {
+            .hero {
+                height: 350px;
+            }
             .hero h1 {
-                font-size: 36px;
+                font-size: 28px;
+                padding: 0 10px;
+            }
+            .hero p {
+                font-size: 16px;
+                padding: 0 20px;
             }
             .categories, .benefits {
                 justify-content: center;
@@ -780,6 +791,8 @@ nav {
 
 .product-img {
     height: 200px;
+    width: 100%;
+    overflow: hidden;
     background-color: #f5f5f5;
     display: flex;
     justify-content: center;
@@ -788,8 +801,10 @@ nav {
 }
 
 .product-img img {
-    max-width: 90%;
-    max-height: 90%;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
 }
 
 .badge {
@@ -1680,10 +1695,11 @@ nav {
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .product-card:hover {
@@ -1706,7 +1722,7 @@ nav {
 }
 
 .product-content {
-    padding: 15px;
+    padding: 20px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -1720,10 +1736,10 @@ nav {
 }
 
 .product-title {
-    font-size: 16px;
+    font-size: 18px;
     color: var(--secondary);
-    margin-bottom: 8px;
-    min-height: 40px;
+    margin-bottom: 10px;
+    min-height: 45px;
 }
 
 .price {
